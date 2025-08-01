@@ -1,0 +1,383 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --a:0;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+.close{
+    display: none;
+}
+body{
+    background-color: black;
+    color: white;
+}
+.left{
+    width: 30vw;
+    padding: 10px;
+    z-index: 10000;
+}
+.right{
+    width: 75vw;
+}
+.home{
+    padding: 20px;
+}
+.home ul li{
+    display: flex;
+    gap: 15px;
+    width: 14px;
+    list-style: none;
+    padding-top: 14px;
+}
+.heading{
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+    padding-top: 14px;
+    font-size: 13px;
+    padding: 23px 13px;
+}
+.heading img{
+    width: 30px;
+}
+.footer{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    font-size: 10px;
+    gap: 13px;
+    position: absolute;
+    bottom: 0;
+}
+.library{
+    min-height: 80vh;
+    position: relative;
+}
+.footer a{
+    color: gray;
+}
+.header{
+    position: relative;
+    z-index: 1000;
+    justify-content: space-between;
+    background-color: rgb(34, 34, 34);
+    height: 75px;
+    transition: width 0.2s ease;
+}
+.header > *{
+    padding: 20px;
+}
+.right{
+    margin: 16px 0;
+    position: relative;
+}
+.spotify-playlist{
+    padding: 16px;
+    height: calc(100vh - 75px - 80px)
+}
+.spotify-playlist h1{
+    padding: 16px;
+}
+
+.card img{
+    width: 90%;
+    object-fit: contain;
+    padding-left: 12px;
+}
+.card >*{
+    padding-top: 9px;
+}
+.card{
+    padding: 5px;
+    background-color: #252525;
+    border-radius: 5px;
+    position: relative;
+}
+.card:hover{
+background-color: black;
+cursor: pointer;
+--a:1;
+}
+.cardcontainer{
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+    flex-wrap: wrap;
+    /* to add scroll bar */
+    max-height: 80vh;
+    overflow-y: auto;
+}
+.play{
+    position: absolute;
+    bottom: 88px;
+    right: px;
+}
+.play svg{
+ height: 50px;
+ width: 50px;
+ opacity: var(--a);
+ transition: all .9s ease-out;
+}
+.signbtn{
+    background-color: rgb(34, 34, 34);
+    color: rgb(123, 118, 118);
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+.signbtn:hover{
+    font-size: 17px;
+    color: white;
+}
+.button >*{
+    margin: 0 12px;
+}
+.loginbtn{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border-radius: 30px;
+    width: 85px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;  
+}
+.loginbtn:hover{
+    background-color: white;
+    color: rgb(123, 118, 118);
+    width: 90px;
+    padding: 10px 14px;
+    font-weight: bolder;
+    font-size: 16px;  
+}
+.playbar{
+    background-color: rgb(34, 34, 34);
+    position: absolute;
+    bottom: 10px;
+    width: 68%;
+    min-height: 25px;
+    padding: 14px;
+    color: white;
+    position: fixed;
+}
+.playbar{
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.songlist ul li{
+    list-style-type: decimal;
+    display: flex;
+    justify-content: space-between;
+    gap: 34px;
+    padding: 3px 0;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 7px 0 0 0;
+}
+.playnow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.songlist{
+    height: 344px;
+    overflow: auto;
+    margin: 10px 0;
+}
+.songlist .info{
+    font-size: 13px;
+}
+.seekbar{
+    height: 2px;
+    width: 93%;
+    background-color: white;
+    position: absolute;
+    bottom: 8px;
+}
+.circle{
+    width: 23px;
+    height: 23px;
+    border-radius: 13px;
+    background-color: white;
+    position: relative;
+    bottom: 11px;
+    transition: left 0.5s;
+}
+.playbar-elements{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.seekbar{
+    cursor: pointer;
+}
+.hamburger{
+    display: none;
+}
+.hamburgercont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+.songinfo{
+    padding: 0 3px;
+    width: 240px;
+}
+.volume{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.range{
+    cursor: pointer;
+}
+.playbar-left{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.playbar-left{
+    display: flex;
+    justify-content: center;
+}
+.playicons{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+@media (max-width:1200px){
+  .left{
+    background-color: black;
+    position: absolute;
+    left: -120%;
+    transition: all .3s;
+    width: 370px;
+    height: 100vh;
+  }
+  .info div{
+    word-break: break-all;
+  }
+  .close img{
+    top: 40px;
+    position: absolute;
+    right: 40px;
+    width: 30px;
+}
+  .right{
+    width: 100vw;
+  }
+  .playbar{
+    width: calc(100vw - 60px);
+  }
+  .seekbar{
+    width: calc(100vw - 60px);
+  }
+  .hamburger{
+    display: block;
+  }
+  .card{
+    width: 44vw;
+  }
+  .cardcontainer{
+    margin: 0;
+    justify-content: center;
+  }
+  .close{
+    display: block;
+  }
+  .songinfo{
+    width: 95px;
+  }
+  .playbar-left{
+    flex-direction: column;
+  }
+  .cardcontainer{
+    max-height: unset;
+overflow-y: unset;
+}
+.playbar{
+    right: 15px;
+}
+}
+@media(max-width:360px){
+    .button{
+        display: flex;
+    }
+}
+@media(max-width:500px){
+.card{
+    max-width: 100%;
+}
+.header>*{
+    padding: 7px;
+}
+.spotify-playlist h1{
+    padding: 4px;
+}
+.button>*{
+    padding: 10px 6px;
+}
+.left{
+    position: fixed;
+    top: 0;
+}
+.library{
+    height: 85vh;
+}
+}
+@media (max-width: 768px) {
+  .card {
+    width: 90%;         /* Make the card take more width */
+    height: auto;       /* Let height adjust based on content */
+    font-size: 1.1rem;  /* Optional: scale up text */
+  }
+
+  .cardcontainer {
+    align-items: center; /* Center cards */
+  }
+  .header{
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 600px) {
+  .header {
+    width: 100vw; /* 90% of the viewport width */
+  }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 992px) {
+  .header {
+    width: 85vw;
+  }
+}
+
+/* Laptops */
+@media (min-width: 993px) and (max-width: 1200px) {
+  .header {
+    width: 80vw;
+  }
+}
+
+/* Desktops */
+@media (min-width: 1201px) {
+  .header {
+    width: 70vw;
+  }
+}
