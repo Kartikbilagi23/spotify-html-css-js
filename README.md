@@ -26,8 +26,6 @@ A responsive clone of the Spotify music player interface, built using **HTML**, 
 
 ## 📸 Screenshots
 
-> _(Add your screenshots in a `screenshots/` folder and update the links below)_
-
 | Desktop View | Mobile View |
 |--------------|-------------|
 | ![Desktop Screenshot](screenshots/desktop.png) | ![Mobile Screenshot](screenshots/mobile.png) |
